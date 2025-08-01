@@ -1,0 +1,134 @@
+.agents-section {
+  padding-top: 2rem;
+  margin: 10svh;
+}
+
+.agents-section h2 {
+  color: var(--secondary-text-color);
+  text-align: start;
+  margin-bottom: 2rem;
+  margin: 8svh 10svh;
+  font-family: "Tungsten-Bold", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 96px;
+  border-bottom: 4px solid var(--button-color);
+}
+
+.agent-controls {
+  display: flex;
+  gap: 1rem;
+  margin: 0 10svh 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.agent-search,
+.role-filter {
+  padding: 1rem 1rem;
+  font-size: 1rem;
+  border: solid 4px var(--secondary-bg-color);
+  background-color: var(--secondary-bg-color);
+  border-radius: 4px;
+}
+
+.agent-search:focus,
+.role-filter:focus {
+  border: solid 4px blue;
+}
+
+.agent-search {
+  flex: 1;
+  background-image: url("/assets/VALORANT/search--v2.png");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: 12px center;
+  padding-left: 4rem;
+  color: white;
+}
+
+/* Reference: https://developer.chrome.com/blog/a-customizable-select?hl=es-419 */
+
+.role-filter {
+  appearance: none;
+}
+
+@supports (appearance: base-select) {
+  .role-filter,
+  .role-filter::picker(select) {
+    appearance: base-select;
+  }
+
+  .role-filter {
+    padding: 0.5em 1em;
+    border: solid 4px var(--secondary-bg-color);
+    background-color: var(--secondary-bg-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+  }
+
+  .role-filter::picker-icon {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-image: url("/assets/VALORANT/Red_Arrow_Down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .role-filter:open::picker-icon {
+    transform: rotate(180deg);
+  }
+
+  .role-filter::picker(select) {
+    border: solid 4px var(--secondary-bg-color);
+    border-radius: 4px;
+    background: var(--role-bg-color);
+    color: white;
+    max-height: 300px;
+    width: 250px;
+    overflow-y: auto;
+  }
+
+  .role-filter option {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.75em .5em;
+    font-size: 1rem;
+  }
+
+  .role-filter option:hover {
+    background-color: #003c7895;
+  }
+
+  .role-filter option:checked {
+    background-color: blue;
+  }
+
+  .role-filter option::checkmark {
+    color: var(--secondary-text-color);
+  }
+
+  .icon {
+    font-size: 1.2em;
+    display: inline-block;
+  }
+
+  .icon > img {
+    width: 32px;
+  }
+
+  selectedcontent {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}

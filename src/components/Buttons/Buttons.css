@@ -1,0 +1,49 @@
+.btn {
+  margin-top: 2rem;
+  padding: 20px 32px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  border: none;
+}
+
+/* Rojo */
+.btn-red {
+  background-color: var(--button-color);
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: var(--dark-text-color);
+}
+
+/* black */
+.btn-black {
+  background-color: var(--dark-text-color);
+  color: white;
+}
+
+.btn-black:hover {
+  background-color: var(--secondary-text-color);
+  color: var(--dark-text-color);
+}
+
+.btn-outline {
+  background-color: var(--button-color);
+  margin:4px;
+  color: white;
+  border: 2px solid transparent;
+}
+.border-btn {
+  margin: 2rem;
+  background-color: transparent;
+  border: 2px solid white;
+  box-shadow: inset 0 0 0 2px transparent;
+}
+
+.btn-outline:hover {
+  background-color: var(--dark-text-color);
+}

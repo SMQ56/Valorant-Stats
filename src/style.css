@@ -1,0 +1,70 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --primary-bg-color: rgb(26, 36, 46);
+  --secondary-bg-color: rgb(17, 17, 17);
+  --role-bg-color: #0c151e;
+  --primary-test-color: white;
+  --secondary-text-color: #ece8e1;
+  --dark-text-color: #0f1923;
+  --button-color: #f94556;
+  --button-bg-color: #373737;
+  --button-hover: #2a2a2a;
+  --FF-Mark-W05-500: "FF Mark W05", Arial, sans-serif;
+  --FF-Mark-W05-600: "FF Mark W05", Arial, sans-serif;
+  --DINNextW1G-400: DINNextW1G, Inter, sans-serif;
+}
+
+@font-face {
+  font-family: "Tungsten-Bold";
+  src: url("/assets/Fonts/tungsten-bold.woff2") format("woff2"),
+    url("/assets/Fonts/tungsten-bold.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  text-rendering: optimizespeed;
+  color: var(--primary-test-color);
+  background-color: var(--primary-bg-color);
+}
+
+header {
+  font-family: var(--FF-Mark-W05-600);
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+main {
+  height: 100svh;
+}
+/* 
+footer {
+  height: 50svh;
+  background-color: var(--secondary-bg-color);
+} */
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* html {
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  tab-size: 4;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+} */
+
+@media (min-width: 1024) {
+}
