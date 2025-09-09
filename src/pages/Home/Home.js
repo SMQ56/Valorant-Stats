@@ -13,9 +13,13 @@ export const Home = () => {
   app.innerHTML = `
     <!-- HOME SECTION -->
     <section class="home">
-      <video autoplay muted loop playsinline class="background-video">
-        <source src="/assets/videos/Official-Cinematic-Video-VALORANT.mp4" type="video/mp4" />
-      </video>
+      <iframe 
+        class="background-video"
+        src="https://www.youtube.com/embed/XCWBLMPnQtI?autoplay=1&mute=1&loop=1&playlist=XCWBLMPnQtI&controls=0&modestbranding=1&rel=0"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
       <div class="home-content">
         <img src="/assets/VALORANT/valorant.png" alt="Valorant Logo" class="home-logo" />
         <h1>Master the battlefield with your stats</h1>
@@ -34,9 +38,13 @@ export const Home = () => {
           ${Button("SEE ALL WEAPONS", "btn-red", "home-btn-weapons")}
         </div>
         <div class="section-media">
-          <video autoplay muted loop>
-            <source src="/assets/videos/info-video.mp4" type="video/mp4" />
-          </video>
+          <iframe
+            class="info-video"
+            src="https://www.youtube.com/embed/muE4aTRVAwU?autoplay=1&mute=1&loop=1&playlist=muE4aTRVAwU&controls=0&modestbranding=1&rel=0"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
         </div>
       </div>
     </section>
