@@ -14,7 +14,7 @@ export const Home = () => {
     <!-- HOME SECTION -->
     <section class="home">
       <video autoplay muted loop playsinline class="background-video">
-        <source src="./videos/Official-Cinematic-Video-VALORANT.mp4">
+        <source src="public/assets/videos/Official-Cinematic-Video-VALORANT.mp4">
       </video>
       <div class="home-content">
         <img src="/assets/VALORANT/valorant.png" alt="Valorant Logo" class="home-logo" />
@@ -35,7 +35,7 @@ export const Home = () => {
         </div>
         <div class="section-media">
           <video autoplay muted loop>
-            <source src="./assets/videos/info-video.mp4" type="video/mp4" />
+            <source src="/public/assets/videos/info-video.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
