@@ -17,7 +17,6 @@
   --button-bg-color: #373737;
   --button-hover: #2a2a2a;
   --FF-Mark-W05-500: "FF Mark W05", Arial, sans-serif;
-  --FF-Mark-W05-600: "FF Mark W05", Arial, sans-serif;
   --DINNextW1G-400: DINNextW1G, Inter, sans-serif;
 }
 
@@ -45,26 +44,66 @@ header {
 }
 
 main {
-  height: 100svh;
+  min-height: 90svh;
 }
-/* 
-footer {
-  height: 50svh;
-  background-color: var(--secondary-bg-color);
-} */
 
 a {
   color: white;
   text-decoration: none;
 }
 
-/* html {
-  line-height: 1.15;
-  text-size-adjust: 100%;
-  tab-size: 4;
-  font-size: 62.5%;
-  scroll-behavior: smooth;
-} */
+/* General Pages CSS */
+.page-section {
+  margin: 16svh 16svh;
+}
 
-@media (min-width: 1024) {
+.page-section h2 {
+  color: var(--secondary-text-color);
+  text-align: start;
+  margin-bottom: 2rem;
+  font-family: "Tungsten-Bold", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 96px;
+  border-bottom: 4px solid var(--button-color);
+}
+
+.page-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1440px) {
+  .page-section {
+    margin: 12svh 8svh;
+  }
+  .page-section h2 {
+    font-size: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .page-section {
+    margin: 12svh 2rem;
+  }
+
+  .page-section h2 {
+    margin: 0;
+    margin-top: 10svh;
+    font-size: 64px;
+    line-height: 64px;
+  }
+  .page-controls {
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-section h2 {
+    font-size: 48px;
+  }
 }

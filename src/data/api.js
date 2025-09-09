@@ -1,3 +1,6 @@
+import { mapDescriptions } from "./mapDescriptions";
+import { mappedWeapons } from "./mappedWeapons";
+
 const URL = "https://valorant-api.com/v1";
 
 /**
@@ -47,6 +50,48 @@ export const getAllAgents = async () => {
   return mappedAgents;
 };
 
+export const getAllMaps = async () => {
+  const maps = await fetchData("maps");
 
-export const getAllMaps = () => fetchData("maps");
-export const getAllWeapons = () => fetchData("weapons");
+  const mapModes = {
+    Ascent: "Competitive",
+    Split: "Competitive",
+    Fracture: "Competitive",
+    Bind: "Competitive",
+    Breeze: "Competitive",
+    Haven: "Competitive",
+    Lotus: "Competitive",
+    Sunset: "Competitive",
+    Pearl: "Competitive",
+    Icebox: "Competitive",
+    Abyss: "Competitive",
+    "The Range": "Practice",
+    District: "TDM",
+    Kasbah: "TDM",
+    Drift: "TDM",
+    Glitch: "TDM",
+    Piazza: "TDM",
+    Corrode: "TDM",
+  };
+
+  const mappedMaps = maps.map((map) => ({
+    name: map.displayName,
+    description:
+      mapDescriptions[map.displayName] || "Description not available.",
+    mode: mapModes[map.displayName] || "Unknown",
+    miniMap: map.displayIcon,
+    nameBG: map.listViewIcon,
+    tallIcon: map.listViewIconTall,
+    splash: map.splash,
+    hoverBG: map.stylizedBackgroundImage,
+  }));
+
+  return mappedMaps;
+};
+
+export const getAllWeapons = async () => {
+  const weapons = await fetchData("weapons");
+  const parsedWeapons = mappedWeapons(weapons);
+
+  return parsedWeapons;
+};

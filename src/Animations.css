@@ -1,0 +1,30 @@
+.scale-in-scroll {
+  animation: scaleIn linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.reveal-scroll {
+  animation: reveal linear both;
+  animation-timeline: view();
+  animation-range: entry 0% cover 35%;
+}
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}

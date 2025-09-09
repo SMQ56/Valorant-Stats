@@ -114,7 +114,6 @@
   color: var(--dark-text-color);
 }
 
-
 .section-media img,
 .section-media video {
   width: 100%;
@@ -123,7 +122,7 @@
   height: auto;
 }
 
-/* === MEDIA QUERY: TABLET / MOBILE === */
+/* - */
 @media (max-width: 1024px) {
   .section-content,
   .section-content.reverse {
@@ -144,5 +143,18 @@
   .section-media video {
     width: 90%;
     margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-text h2 {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .home-content {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 5%;
   }
 }

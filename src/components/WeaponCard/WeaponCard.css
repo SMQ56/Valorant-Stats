@@ -1,0 +1,66 @@
+.weapon-card {
+  background-color: #0b0c10;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 2px solid #c5c6c7;
+}
+
+.weapon-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  border: 2px solid #f50057;
+  transition: 0.2s ease;
+}
+
+.weapon-img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  padding: 1rem;
+}
+
+.weapon-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0.5rem;
+  color: #66fcf1;
+}
+
+.weapons-skills {
+  padding: 4px 10px;
+  margin: 4px;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  background-color: #0008ffda;
+  color: white;
+  border: solid 2px black;
+  border-radius: 4px;
+}
+
+.weapon-category {
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f50057;
+  text-align: center;
+}
+
+.name-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 2px solid white;
+  margin-top: 1rem;
+}

@@ -1,7 +1,7 @@
 import { cleanPage } from "../../utils/cleanPage.js";
 import { getAllAgents } from "../../data/api.js";
 import { AgentCard } from "../../components/AgentCard/AgentCard.js";
-import { renderAgentModal } from "../../components/Modal/AgentModal.js";
+import { renderAgentModal } from "../../components/AgentModal/AgentModal.js";
 import "./Agents.css";
 
 export const Agents = async () => {
@@ -11,7 +11,7 @@ export const Agents = async () => {
   const agents = await getAllAgents();
 
   const section = document.createElement("section");
-  section.classList.add("agents-section");
+  section.classList.add("page-section");
 
   const title = document.createElement("h2");
   title.textContent = "Agents";
@@ -19,7 +19,7 @@ export const Agents = async () => {
 
   // Buscador + Filtros
   const controls = document.createElement("div");
-  controls.classList.add("agent-controls");
+  controls.classList.add("page-controls");
 
   controls.innerHTML = `
     <input type="text" placeholder="Search agent..." class="agent-search" />
@@ -31,28 +31,28 @@ export const Agents = async () => {
         <option value="All">All Roles</option>
 
         <option value="Controller">
-            <span class="icon">
+            <span class="role-icon">
                 <img src="/assets/VALORANT/Controller.svg" alt="Controller" />
             </span> 
             <span>Controller</span>
         </option>
 
         <option value="Duelist">
-            <span class="icon">
+            <span class="role-icon">
                 <img src="/assets/VALORANT/Duelist.svg" alt="Duelist" />
             </span> 
             <span>Duelist</span>
         </option>
 
         <option value="Initiator">
-            <span class="icon">
+            <span class="role-icon">
                 <img src="/assets/VALORANT/Initiator.svg" alt="Initiator" />
             </span>
             <span>Initiator</span>
         </option>
 
         <option value="Sentinel">
-            <span class="icon">
+            <span class="role-icon">
                 <img src="/assets/VALORANT/Sentinel.svg" alt="Sentinel" />
             </span> 
             <span>Sentinel</span>

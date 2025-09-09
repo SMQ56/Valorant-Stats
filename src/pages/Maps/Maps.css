@@ -1,0 +1,79 @@
+.maps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 10svh 1rem;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+#sticky-Competitive {
+  background: radial-gradient(circle, #306af1, #0208a7);
+}
+
+.sticky-mode-title {
+  position: sticky;
+  text-shadow: black 2px 2px 1px;
+  top: 10svh;
+  background: radial-gradient(circle, #f02035, rgb(93, 0, 0));
+  text-align: center;
+  z-index: 10;
+  padding: 1rem 1rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+  margin: 0 10svh 1rem;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+
+.mode-icon {
+  width: 32px;
+}
+
+@media screen and (max-width: 1024px) { 
+  .maps-grid {
+    margin: 0 8svh;
+    margin-top: 1.75rem;
+  }
+
+  .sticky-mode-title {
+    font-size: 2rem;
+    padding: 1rem;
+    margin: 0 8svh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .maps-grid {
+    margin: 0;
+    gap: 0.75rem;
+  }
+
+  .sticky-mode-title {
+    font-size: 1.5rem;
+    padding: 0.75rem;
+    margin: 0;
+    margin-top: 1rem;
+  }
+
+  .mode-icon {
+    width: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .maps-grid {
+    margin: 0;
+    gap: 0.5rem;
+  }
+
+  .sticky-mode-title {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+  }
+
+  .mode-icon {
+    width: 24px;
+  }
+}

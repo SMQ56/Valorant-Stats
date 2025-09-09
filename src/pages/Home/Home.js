@@ -1,6 +1,10 @@
 import "./Home.css";
 import { Button } from "../../components/Buttons/Buttons.js";
 import { cleanPage } from "../../utils/cleanPage.js";
+import { linkPage } from "../../utils/linkPage.js";
+import { Weapons } from "../Weapons/Weapons.js";
+import { Agents } from "../Agents/Agents.js";
+import { Maps } from "../Maps/Maps.js";
 
 export const Home = () => {
   const app = document.querySelector("main");
@@ -21,10 +25,10 @@ export const Home = () => {
     </section>
 
     <!-- WEAPONS SECTION -->
-    <section class="sections">
+    <section class="sections ">
       <img src="/assets/VALORANT/home-bg-1.png" alt="Weapons BG" class="bg"/>
       <div class="section-content">
-        <div class="section-text dark-text">
+        <div class="section-text dark-text ">
           <h2>CHOOSE YOUR WEAPON</h2>
           <p>VALORANT offers a wide arsenal—from <strong>precise</strong> pistols to <strong>powerful</strong> sniper rifles. Each weapon has a role, a rhythm, and recoil to master. Learn their <strong>stats</strong>, and you’ll know your best option in every fight.</p>
           ${Button("SEE ALL WEAPONS", "btn-red", "home-btn-weapons")}
@@ -70,4 +74,9 @@ export const Home = () => {
       </div>
     </section>
   `;
+
+  // 🎯 Add listeners after rendering
+  linkPage("#home-btn-weapons", Weapons);
+  linkPage("#home-btn-agents", Agents);
+  linkPage("#home-btn-maps", Maps);
 };

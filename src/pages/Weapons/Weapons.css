@@ -1,0 +1,139 @@
+.weapon-search,
+.category-filter {
+  padding: 1.4rem 1rem;
+  font-size: 1rem;
+  border: solid 4px var(--secondary-bg-color);
+  background-color: #ece8e1;
+  border-radius: 4px;
+}
+
+.weapon-search:focus,
+.category-filter:focus {
+  border: solid 4px var(--button-color);
+}
+
+.weapon-search {
+  flex: 1;
+  background-image: url("/assets/VALORANT/search--v2.png");
+  background-repeat: no-repeat;
+  background-size: 32px 32px;
+  background-position: 12px center;
+  padding-left: 4rem;
+  color: black;
+}
+
+/* Reference: https://developer.chrome.com/blog/a-customizable-select?hl=es-419 */
+
+.category-filter {
+  appearance: none;
+}
+
+@supports (appearance: base-select) {
+  .category-filter,
+  .category-filter::picker(select) {
+    appearance: base-select;
+  }
+
+  .category-filter {
+    padding: 0.2em 1em;
+    border: solid 4px var(--secondary-bg-color);
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    color: black;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .category-filter::picker-icon {
+    content: "";
+    width: 1em;
+    height: 1em;
+    background-image: url("/assets/VALORANT/Red_Arrow_Down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .category-filter:open::picker-icon {
+    transform: rotate(180deg);
+  }
+
+  .category-filter::picker(select) {
+    border: solid 4px var(--secondary-bg-color);
+    border-radius: 4px;
+    color: black;
+    max-height: 300px;
+    width: 90%;
+    overflow-y: auto;
+  }
+
+  .category-filter option {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    padding: 0.4em 1em;
+    font-size: 1rem;
+  }
+
+  .category-filter option:hover {
+    background-color: #dddddd;
+  }
+
+  .category-filter option:checked {
+    background-color: var(--button-color);
+  }
+
+  .category-filter option::checkmark {
+    color: var(--secondary-text-color);
+  }
+
+  .weapons-icon {
+    font-size: 1em;
+    display: inline-block;
+  }
+
+  .weapons-icon > img {
+    width: 64px;
+    transform: rotate(45deg);
+  }
+
+  selectedcontent {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+  }
+}
+
+/*  */
+
+.weapons-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .weapons-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .weapons-card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .weapons-card-grid {
+    grid-template-columns: 1fr;
+    margin: 0;
+  }
+}
