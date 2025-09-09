@@ -6,7 +6,7 @@ import { linkPage } from "./utils/linkPage";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 
-import { Agents } from "./pages/Ag ents/Agents.js";
+import { Agents } from "./pages/Agents/Agents.js";
 import { Maps } from "./pages/Maps/Maps.js";
 import { Weapons } from "./pages/Weapons/Weapons.js";
 
